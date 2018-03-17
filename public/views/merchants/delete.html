@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Merchant</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Delete</th>
+            </tr>
+            <tr ng-repeat="user in deleteMerchants.users">
+                <td>{{user.name}}</td>
+                <td>{{user.email}}</td>
+                <td><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="deleteMerchants.delete(user._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>

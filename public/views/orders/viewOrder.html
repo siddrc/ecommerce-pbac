@@ -1,0 +1,62 @@
+<div class="panel panel-default">
+    <div class="panel-heading">View Order(Order Id:{{viewOrder._id}})</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="productImages/{{viewOrder.image}}" class="img-thumbnail" />
+                <table class="table table-condensed">
+                     <tr>
+                        <td>
+                            <h6><b>Order Id</b>:{{viewOrder._id}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Order Name</b>:{{viewOrder.name}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Product Name</b>:{{viewOrder.productName}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Description</b>:{{viewOrder.productDescription}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Order Cost</b>:Rs.{{viewOrder.orderValue}}/-</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Quantity</b>:{{viewOrder.quantity}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Order Complete</b>:{{viewOrder.complete}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Received Payment</b>:{{viewOrder.receivedPayment}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Delivery Address</b>:<textarea disabled>{{viewOrder.deliveryAddress}}</textarea title="Enter address where the product is to be delivered"></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Comments</b>:<textarea disabled>{{viewOrder.comments}}</textarea></h6>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

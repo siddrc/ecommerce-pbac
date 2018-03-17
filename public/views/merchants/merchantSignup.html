@@ -1,0 +1,30 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Sign-Up As a Merchant</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <form ng-submit="merchantSignup.signUp()">
+                    <label>Name
+                        <font color="red">*</font>
+                    </label>
+                    <input type="text" class="form-control" placeholder="Enter Name" aria-describedby="basic-addon1" ng-model="merchantSignup.name" required maxlength="20">
+                    <label>E-mail
+                        <font color="red">*</font>
+                    </label>
+                    <input type="email" class="form-control" placeholder="Enter Email" aria-describedby="basic-addon1" ng-model="merchantSignup.email" required maxlength="50" ng-blur="merchantSignup.checkUniqueEmail()">
+                    <label>Password
+                        <font color="red">*</font>
+                    </label>
+                    <input type="password" class="form-control" placeholder="Enter Password" aria-describedby="basic-addon1" ng-model="merchantSignup.password" required maxlength="15">
+                    <label>Confirm Password
+                        <font color="red">*</font>
+                    </label>
+                    <input type="password" class="form-control" placeholder="Enter Password" aria-describedby="basic-addon1" ng-model="merchantSignup.confirmPassword" required maxlength="15" ng-blur="merchantSignup.checkPassword()">
+                    <hr/>
+                    <button type="submit" class="btn-sm btn-success" ng-disabled="merchantSignup.emailNotUnique && merchantSignup.notSamePassword">Submit</button>
+                    <button type="reset" class="btn-sm btn-danger">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

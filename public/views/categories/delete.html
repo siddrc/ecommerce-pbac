@@ -1,0 +1,19 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Categories</div>
+    <div class="panel-body">
+        <div class="alert alert-danger" role="alert">
+            <b><u>Note:</b></u>Once the category is deleted, the associated products exist but in orphan state ie with no category as their parent, they can be associated to some other category so that the product can be seen on the site.
+        </div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>View Category Details</th>
+            </tr>
+            <tr ng-repeat="category in viewCategories.categories">
+                <td>{{category.name}}</td>
+                <td><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="viewCategories.delete(category._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

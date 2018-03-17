@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Admin Users</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>View</th>
+            </tr>
+            <tr ng-repeat="user in viewAdmins.users">
+                <td>{{user.name}}</td>
+                <td><span class="glyphicon glyphicon-search" aria-hidden="true" ng-click="viewAdmins.view(user._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="viewAdminUserModal" class="modal fade" role="dialog" style="z-index: 1100;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Admin Users Details</h4>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <input type="text" class="form-control" placeholder="Admin Name" aria-describedby="basic-addon1" ng-model="viewAdmins.adminName" disabled>
+                    <br/>
+                    <input type="text" class="form-control" placeholder="Admin Email" aria-describedby="basic-addon1" ng-model="viewAdmins.email" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

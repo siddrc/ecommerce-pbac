@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Orders</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Order Id</th>
+                <th>Name</th>
+                <th>Orders</th>
+            </tr>
+            <tr ng-repeat="order in viewOrders.orders">
+                <td>{{order._id}}</td>
+                <td>{{order.name}}</td>
+                <td><span class="glyphicon glyphicon-search" aria-hidden="true" ng-click="viewOrders.viewOrder(order._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+

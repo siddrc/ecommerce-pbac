@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Policies</div>
+    <div class="panel-body">
+        <div class="alert alert-danger" role="alert">
+            <b><u>Note:</b></u>Please note that the users associated with this policy will not be be able to login, once the policy is deleted
+        </div>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>Delete</th>
+            </tr>
+            <tr ng-repeat="policy in deletePolicies.policies">
+                <td>{{policy.name}}</td>
+                <td><span class="glyphicon glyphicon-remove" aria-hidden="true" ng-click="deletePolicies.deletePolicy(policy._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>

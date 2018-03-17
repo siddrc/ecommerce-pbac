@@ -1,0 +1,38 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Add a Product</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <form ng-submit="addProducts.create()">
+                    <label>Product Name
+                        <font color="red">*</font>
+                    </label>
+                    <input type="text" class="form-control" placeholder="Enter Product Name" aria-describedby="basic-addon1" ng-model="addProducts.productName" required maxlength="20">
+                    <label>Product Description
+                        <font color="red">*</font>
+                    </label>
+                    <textarea class="form-control" placeholder="Enter Product Description" aria-describedby="basic-addon1" ng-model="addProducts.productDescription" required>
+                    </textarea>
+                    <label>Product Cost
+                        <font color="red">*</font>
+                    </label>
+                    <input type="number" class="form-control" placeholder="Enter Product Cost" aria-describedby="basic-addon1" ng-model="addProducts.productCost" required maxlength="9">
+                    <label>Merchant
+                        <font color="red">*</font>
+                    </label>
+                    <input type="text" class="form-control" placeholder="Select Merchant" aria-describedby="basic-addon1" required disabled value="System Admin">
+                    <label>Category
+                        <font color="red">*</font>
+                    </label>
+                    <select class="form-control" ng-model="addProducts.category" placeholder="Select Category" required>
+                        <option ng-repeat="category in addProducts.categories" value="{{category._id}}">{{category.name}}
+                        </option>
+                    </select>
+                    <hr/>
+                    <button type="submit" class="btn-sm btn-success">Submit</button>
+                    <button type="reset" class="btn-sm btn-danger">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

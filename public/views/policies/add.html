@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Policies</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="input-group">
+                    <form ng-submit="addPolicy.createPolicy()">
+                        <input type="text" class="form-control" placeholder="Policy Name" aria-describedby="basic-addon1" ng-model="addPolicy.policyName" required>
+                        <div ng-repeat="policyMaster in addPolicy.policyMaster">
+                            <b>{{policyMaster.name}}</b>
+                            <div ng-repeat="policyMasterPermissionTypes in addPolicy.policyMasterPermissionTypes">
+                                <i>{{policyMasterPermissionTypes.name}}</i>
+                                <input type="checkbox" ng-checked="addPolicy.checkPermission(policyMaster.name,policyMasterPermissionTypes.name)" ng-click="addPolicy.addPermission(policyMaster.name,policyMasterPermissionTypes.name)">
+                            </div>
+                            <hr/>
+                        </div>
+                        <button type="submit" class="btn-sm btn-success">Submit</button>
+                        <button type="reset" class="btn-sm btn-danger">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

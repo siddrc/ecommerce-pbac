@@ -1,0 +1,30 @@
+<div ng-controller="loginController">
+    <div ng-if="isLoggedIn === 'N'">
+        <form class="navbar-form navbar-right">
+            <div class="form-group">
+                <input type="text" placeholder="Email" class="form-control" ng-model="login.userEmail">
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Password" class="form-control" ng-model="login.userPassword">
+            </div>
+            <button type="submit" class="btn-sm btn-success" ng-click="login.processLogin()">Login</button>
+            <!-- <button type="button" class="btn-sm btn-info" ng-click="login.forgotPassword()">Forgot Password?</button> -->
+            <div class="btn-group">
+                <button type="button" class="btn-sm btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign-Up <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#" ng-click="login.openCustomerSignUp()">For Customers</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#" ng-click="login.openMerchantSignUp()">For Merchants</a></li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <div ng-if="isLoggedIn === 'Y'">
+        <div class="form-group navbar-right">
+            <font color="white">Hi {{loggedInUserName }}</font>
+            <button type="button" class="btn-sm btn-default" ng-click="login.logOut()">Logout</button>
+        </div>
+    </div>
+</div>

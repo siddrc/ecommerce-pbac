@@ -1,0 +1,26 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Add Admin. Users</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <form ng-submit="addAdminUser.create()">
+                	<label>Admin. Name</label>
+                    <input type="text" class="form-control" placeholder="Admin. Name" aria-describedby="basic-addon1" ng-model="addAdminUser.name" required>
+                    <label>Admin. Email</label>
+                    <input type="text" class="form-control" placeholder="Admin. Email" aria-describedby="basic-addon1" ng-model="addAdminUser.email" required>
+                    <label>Admin. Password</label>
+                    <input type="password" class="form-control" aria-describedby="basic-addon1" ng-model="addAdminUser.password" disabled>Default Password:<b>password123!</b>
+                    <br>
+                    <label>Admin. Policy</label>
+                    <select class="form-control" ng-model="addAdminUser.policy" placeholder="Select Policy" required>
+                        <option ng-repeat="policy in addAdminUser.policies" value="{{policy._id}}">{{policy.name}}
+                            </option>
+                    </select>
+                    <br>
+                    <button type="submit" class="btn-sm btn-success">Submit</button>
+                    <button type="reset" class="btn-sm btn-danger">Reset</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

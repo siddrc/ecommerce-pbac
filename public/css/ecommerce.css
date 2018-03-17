@@ -1,0 +1,282 @@
+div{
+  font-family: "lato", sans-serif;
+}
+.backgroundImageWelcomePage {
+  background: url('./images/background-1.jpg') no-repeat center center
+  fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.dashboardBody {
+	padding-top: 50px;
+	margin-bottom: 60px;
+}
+.starter-template {
+	padding: 30px 15px;
+	text-align: left;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.loginBody {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  background-color: transparent;
+}
+
+.form-signin {
+  max-width: 450px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.uiGrid {
+  width: 100%;
+  height: 250px;  
+}
+.uiGrid450 {
+  width: 100%;
+  height: 450px;
+}
+.test{
+  width:100px;
+  height:100px;
+}
+/*Arrow buttons*/
+.btn-arrow-right,
+.btn-arrow-left {
+  position: relative;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+.btn-arrow-right {
+  padding-left: 36px;
+}
+.btn-arrow-left {
+  padding-right: 36px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after,
+.btn-arrow-left:before,
+.btn-arrow-left:after { /* make two squares (before and after), looking similar to the button */
+  content:"";
+  position: absolute;
+  top: 5px; /* move it down because of rounded corners */
+  width: 22px; /* same as height */
+  height: 22px; /* button_outer_height / sqrt(2) */
+  background: inherit; /* use parent background */
+  border: inherit; /* use parent border */
+  border-left-color: transparent; /* hide left border */
+  border-bottom-color: transparent; /* hide bottom border */
+  border-radius: 0px 4px 0px 0px; /* round arrow corner, the shorthand property doesn't accept "inherit" so it is set to 4px */
+  -webkit-border-radius: 0px 4px 0px 0px;
+  -moz-border-radius: 0px 4px 0px 0px;
+}
+.btn-arrow-right:before,
+.btn-arrow-right:after {
+  transform: rotate(45deg); /* rotate right arrow squares 45 deg to point right */
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+.btn-arrow-left:before,
+.btn-arrow-left:after {
+  transform: rotate(225deg); /* rotate left arrow squares 225 deg to point left */
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+}
+.btn-arrow-right:before,
+.btn-arrow-left:before { /* align the "before" square to the left */
+left: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:after { /* align the "after" square to the right */
+right: -11px;
+}
+.btn-arrow-right:after,
+.btn-arrow-left:before { /* bring arrow pointers to front */
+  z-index: 1;
+}
+.btn-arrow-right:before,
+.btn-arrow-left:after { /* hide arrow tails background */
+  background-color: white;
+}
+.styled-select select {
+ background: transparent;
+ width: 288px;
+ padding: 5px;
+ font-size: 16px;
+ line-height: 1;
+ border: 0;
+ border-radius: 0;
+ height: 34px;
+ -webkit-appearance: none;
+}
+
+.styled-select {
+ width: 260px;
+ height: 34px;
+ overflow: hidden;
+ background: url(images/down-arrow-1.png) no-repeat right #ddd;
+ border: 1px solid #ccc;
+ margin-bottom: 10px;
+}
+
+.error {
+  color: darkred;
+  margin: 2px 0 5px 0;
+}
+
+.pacificoClass{
+  font-family: 'Pacifico', cursive,Arial, serif; 
+  font-weight: 400; ;
+}
+.pacificoWhiteClass{
+  font-family: 'Pacifico', cursive,Arial, serif; 
+  font-weight: 150; 
+  color:white;
+  font-size: 20px;
+}
+
+.pacificoBlueClass{
+  font-family: 'Pacifico', cursive,Arial, serif; 
+  font-weight: 150; 
+  color:#3498DB;
+  font-size: 20px;
+}
+.chart {
+  padding: 20px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #2c3e50;
+}
+
+.uppercase {
+  text-transform: uppercase;
+
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+
+.menu-text{
+  text-shadow:#e0e0e0 1px 1px 0;
+  font-weight: 800;
+}
+
+.list-text{
+  text-shadow:#e0e0e0 1px 1px 0;
+  font-weight: 800;
+  font-size: 15px;
+  text-align: left;
+}
+
+.greenIcon{
+  color : green;
+}
+
+*.whiteIcon{
+  color : #FFF;
+}
+
+*.grayIcon{
+  color : gray;
+}
+
+.dashboardBodyNew {
+  width:100%;
+}
+
+.modalZIndex{
+  z-index: 1100;
+}
+
+.col-xs-4:not(:last-child) {
+  border-right: 1px solid #ccc;
+}
+
+.bootbox.modal > .modal-dialog {
+  z-index: 1150 !important;
+}
+
+.box-height{
+  height:400px;
+}
+.vscroll-list{
+  height: 250px;
+  overflow-y: auto;
+}
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 230px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+  font-weight: 800;
+  font-size: 15px;
+  color: #441EA4;
+  text-shadow:#e0e0e0 1px 1px 0;
+}
+.modal.modal-wide .modal-dialog {
+  width: 90%;
+}
+.modal-wide .modal-body {
+  overflow-y: auto;
+}
+.displayInline {
+  display: inline;
+}
+.thumbnail { height: 180px !important; width:200px; }

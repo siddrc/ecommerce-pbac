@@ -1,0 +1,45 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Buy Product</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="productImages/{{productDetails.data.image}}" class="img-thumbnail" />
+                <table class="table table-condensed">
+                    <tr>
+                        <td>
+                            <h6><b>Name</b>:{{productDetails.data.productName}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Description</b>:{{productDetails.data.productDescription}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Unit Cost</b>:Rs.{{productDetails.data.productCost}}/-</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Quantity</b>:<input type="number" maxlength="3" ng-value="1" ng-model="productDetails.boughtQuantity" min="1" max="100" ng-change="productDetails.changeQuanity()"></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Order Value</b>Rs:{{productDetails.data.orderCost}}</h6>
+                        </td>
+                    </tr>
+                    <tr ng-hide="showAdminFunctions">
+                        <td>
+                            <input type="button" value="Buy Now" title="Buy right now." class="btn btn-success btn-lg" ng-click="productDetails.buyNow()">
+                        </td>
+                        <td>
+                            <!-- <input type="button" value="Add to cart" title="Add to cart and continue shopping." class="btn btn-warning btn-lg" ng-click="productDetails.addToCart()"> -->&nbsp;
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

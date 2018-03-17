@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Place Order</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="productImages/{{order.data.image}}" class="img-thumbnail" />
+                <table class="table table-condensed">
+                    <tr>
+                        <td>
+                            <h6><b>Order No.</b>:{{order.id}} </h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Name</b>:{{order.data.productName}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Description</b>:{{order.data.productDescription}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Order Cost</b>:Rs.{{order.data.orderValue}}/-</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Quantity</b>:{{order.data.quantity}}</h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Delivery Address</b>:<textarea ng-model="order.deliveryAddress"></textarea title="Enter address where the product is to be delivered"></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h6><b>Additional Comments</b>:<textarea ng-model="order.comments"></textarea title="Enter comments"></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="Confirm Order and Pay" title="Confirm" class="btn btn-success btn-lg" ng-click="order.confirmOrder()">
+                        </td>
+                        <td>
+                            <input type="button" value="Cancel Order" title="Cancel this order" class="btn btn-danger btn-lg" ng-click="order.cancelOrder()">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

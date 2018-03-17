@@ -1,0 +1,41 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Policies</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>View Policy Details</th>
+            </tr>
+            <tr ng-repeat="policy in viewPolicies.policies">
+                <td>{{policy.name}}</td>
+                <td><span class="glyphicon glyphicon-search" aria-hidden="true" ng-click="viewPolicies.view(policy._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="viewPolicyDetailsModal" class="modal fade" role="dialog" style="z-index: 1100;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Policy Details</h4>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <input type="text" class="form-control" placeholder="Policy Name" aria-describedby="basic-addon1" ng-model="viewPolicies.policyName" disabled>
+                    <div ng-repeat="policyMaster in viewPolicies.policyMaster">
+                        <b>{{policyMaster.name}}</b>
+                        <div ng-repeat="policyMasterPermissionTypes in viewPolicies.policyMasterPermissionTypes">
+                            <i>{{policyMasterPermissionTypes.name}}</i>
+                            <input type="checkbox" ng-checked="viewPolicies.checkPermission(policyMaster.name,policyMasterPermissionTypes.name)" disabled>
+                        </div>
+                    </div>
+                    <br/>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

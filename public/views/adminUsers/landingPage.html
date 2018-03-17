@@ -1,0 +1,29 @@
+<div class="jumbotron">
+    <div class="container">
+        <h1>Admin Panel</h1>
+        <p>Click on the Admin navbar option to perform Admin. related activities.</p>
+        <code>The association of the entities are as follows:
+        	<pre>
+        	1. To create admin user , or for letting customers/merchants sign-up
+        	   policies need to be created first.
+        	2. If a policy needs to be deleted, then first all the users that are mapped to the policy need to be deleted first, 
+        	hence consider below points.
+        	3. a)A admin user can be deleted plainly without any side-effects.
+               b)If a customer needs to be deleted then first all the orders made by that user need to be deleted.
+        	   c)If a merchant needs to be deleted then first all the products created by that merchant need to deleted.
+        	4. All products are linked with categories and orders.
+        	6. To delete a category, delete all products in the category.
+            7. To delete a product, delete all orders with that product.
+        The above points clearly state out the relationship among the entities in the application.
+        Policy -> Users (Customer,Admin,Merchant)
+        Customer -> Orders 
+        Products -> Orders
+
+        Admin -> Has all admin functions but does not have children relationships
+        Categories -> Products
+        Merchant -> Categories -> Products
+
+        </pre>
+        </code>
+    </div>
+</div>

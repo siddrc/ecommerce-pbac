@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Categories</div>
+    <div class="panel-body">
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>View Category Details</th>
+            </tr>
+            <tr ng-repeat="category in viewCategories.categories">
+                <td>{{category.name}}</td>
+                <td><span class="glyphicon glyphicon-search" aria-hidden="true" ng-click="viewCategories.view(category._id)"></span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div id="viewCategoryDetailsModal" class="modal fade" role="dialog" style="z-index: 1100;">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Category Details</h4>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <input type="text" class="form-control" placeholder="Policy Name" aria-describedby="basic-addon1" ng-model="viewCategories.categoryName" disabled>
+                    <br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Upload Product Image</div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-4">
+                <form ref='uploadForm' method="POST" 
+                action="/ajax/products/uploadProductImage" id='uploadForm' encType="multipart/form-data">
+                    <label>Product Image
+                        <font color="red">*</font>
+                    </label>
+                    <input type="file" class="form-control" placeholder="Enter Product Name" aria-describedby="basic-addon1" name="productImage">
+                    <hr>
+                    <input type="submit" class="btn-sm btn-success" value='Upload' />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
